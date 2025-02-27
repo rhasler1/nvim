@@ -1,8 +1,4 @@
-vim.cmd("set expandtab")
-vim.cmd("set tabstop=4")
-vim.cmd("set softtabstop=4")
-vim.cmd("set shiftwidth=4")
-vim.wo.number = true
-vim.g.mapleader = " "
-
 require("config.lazy")
+-- options must be loaded & run before keymaps
+require("config.options")
+require("config.keymaps")
