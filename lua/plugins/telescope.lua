@@ -6,5 +6,5 @@ return {
         local telescope = require("telescope")
 
         telescope.setup({})
-    end
+    end,
 }
