@@ -2,12 +2,30 @@ return {
     "nvim-treesitter/nvim-treesitter",
     build = ":TSUpdate",
     config = function()
-        local treesitter_config = require("nvim-treesitter.configs")
+        require("nvim-treesitter.configs").setup({
+            -- A list of parser names, or "all" (the listed parsers MUST always be installed)
+            ensure_installed = {
+                "c",
+                "lua",
+                "vim",
+                "vimdoc",
+                "query",
+                "markdown",
+                "markdown_inline"
+            },
 
-        treesitter_config.setup({
-            ensure_installed = {"lua", "javascript", "c", "rust", "python"},
-            highlight = {enable = true},
-            indent = {enable = true},
+            -- Install parsers synchronously (only applied to `ensure_installed`)
+            sync_install = false,
+
+            -- Automatically install missing parsers when entering buffer
+            auto_install = false,
+
+            highlight = {
+                enable = true,
+                additional_vim_regex_highlighting = false,
+            },
+
+            indent = false,
         })
     end
 }
