@@ -19,4 +19,7 @@ vim.opt.termguicolors = true
 
 vim.opt.scrolloff = 8
 
-vim.opt.updatetime = 50
+vim.g.mapleader = " "
+vim.keymap.set("n", "<leader>a", function() print "hi" end)
+
+vim.opt.timeoutlen = 1000
