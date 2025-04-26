@@ -10,17 +10,17 @@ return {
             {
                 "<leader>ff",
                 builtin.find_files,
-                desc = "Find files"
+                desc = "Find Files"
             },
             {
                 "<leader>fs",
                 builtin.live_grep,
-                desc = "Live grep"
+                desc = "Live Grep"
             },
             {
                 "<leader>fh",
                 builtin.help_tags,
-                desc = "Help tags"
+                desc = "Help Tags"
             },
         }
     end,

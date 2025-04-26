@@ -20,6 +20,6 @@ vim.opt.termguicolors = true
 vim.opt.scrolloff = 8
 
 vim.g.mapleader = " "
-vim.keymap.set("n", "<leader>a", function() print "hi" end)
+vim.keymap.set("n", "<leader>1", function() print "Testing Leader" end)
 
 vim.opt.timeoutlen = 1000
