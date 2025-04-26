@@ -1,3 +1,5 @@
+-- vim settings & keymaps
+require("config.settings")
+
+-- lazy
 require("config.lazy")
-require("config.options")
-require("config.keymaps")
