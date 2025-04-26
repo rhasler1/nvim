@@ -9,39 +9,62 @@ return {
 
         vim.keymap.set(
             "n",
-            "<leader>a",
+            "<leader>ha",
             function()
                 harpoon:list():add()
             end,
-            { desc = "Harpoon File" }
+            { desc = "Mark Current File" }
         )
+        
         vim.keymap.set(
             "n",
-            "<leader>h",
+            "<leader>hr",
+            function()
+                harpoon:list():remove()
+            end,
+            { desc = "Unmark Current File" }
+        )
+
+        vim.keymap.set(
+            "n",
+            "<leader>hc",
+            function()
+                harpoon:list():clear()
+            end,
+            { desc = "Unmark All Files" }
+        )
+
+        vim.keymap.set(
+            "n",
+            "<leader>hh",
             function()
                 harpoon.ui:toggle_quick_menu(harpoon:list())
             end,
             { desc = "Harpoon Menu Toggle" }
         )
 
+        -- not using below keymaps atm
         vim.keymap.set(
             "n",
             "<C-h>",
             function() harpoon:list():select(1)
             end
         )
+
         vim.keymap.set(
             "n",
             "<C-t>",
             function() harpoon:list():select(2)
             end
         )
+        
         vim.keymap.set(
             "n",
             "<C-n>",
             function() harpoon:list():select(3) 
             end
         )
+        
         vim.keymap.set(
             "n",
             "<C-s>",
@@ -56,11 +79,13 @@ return {
             function() harpoon:list():prev()
             end
         )
+
         vim.keymap.set(
             "n",
             "<C-S-N>",
             function() harpoon:list():next()
             end
         )
+
     end,
 }
