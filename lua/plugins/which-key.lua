@@ -10,7 +10,7 @@ return {
                         global = true
                     })
             end,
-            desc = "Buffer Local Keymaps (which-key)",
+            desc = "Global Keymaps",
         },
     },
 }

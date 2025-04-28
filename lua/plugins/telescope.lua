@@ -10,7 +10,7 @@ return {
             {
                 "<leader>ff",
                 builtin.find_files,
-                desc = "Find Files"
+                desc = "Find Nonhidden Files"
             },
             {
                 "<leader>fs",

@@ -31,7 +31,8 @@ vim.keymap.set(
     "<leader>1",
     function()
         print "Testing Leader"
-    end
+    end,
+    { desc = "Leader Test" }
 )
 
 vim.keymap.set(
