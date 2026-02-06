@@ -22,6 +22,9 @@ vim.opt.scrolloff = 8
 
 vim.opt.timeoutlen = 1000
 
+-- this makes all yanks go to clipboard
+vim.opt.clipboard = "unnamedplus"
+
 -- vim globals
 vim.g.mapleader = " "
 
