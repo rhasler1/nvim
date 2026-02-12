@@ -19,7 +19,7 @@ nvim/
 └── README.md
 ```
 - options.lua: Set Vim options here
-- mappings.lua: Set key mappings here
+- mappings.lua: Set Vim key mappings here
 
 ### Third party plugins
 - Currently, I do not use third party plugins.
