@@ -3,6 +3,14 @@
 -- Map leader
 vim.g.mapleader = ' '
 
+-- Word substitution
+vim.keymap.set(
+    'n',
+    '<leader>s',
+    [[:%s/<C-r><C-w>//g<Left><Left>]],
+    { desc = "Replace current word globally" }
+)
+
 -- Test map leader
 -- arg0: 'n'                = mapping only works in this mode ('n'=normal)
 -- arg1: '<leader>1'        = key combination to trigger command or function
@@ -22,4 +30,11 @@ vim.keymap.set(
     '<leader>yy',
     '\"+yy',
     { desc = 'Yank current line to system clipboard' }
+)
+
+vim.keymap.set(
+    'n',
+    '<leader>p',
+    '"+p',
+    { desc = 'Paste from system clipboard' }
 )
