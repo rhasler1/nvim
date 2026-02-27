@@ -3,8 +3,13 @@
 -- Map leader
 vim.g.mapleader = ' '
 
--- TODO: [2/23/26] Add a mapping for the substitute command
--- e.g., :%s/old_word/new_word/g
+-- Word substitution
+vim.keymap.set(
+    'n',
+    '<leader>s',
+    [[:%s/<C-r><C-w>//g<Left><Left>]],
+    { desc = "Replace current word globally" }
+)
 
 -- Test map leader
 -- arg0: 'n'                = mapping only works in this mode ('n'=normal)
