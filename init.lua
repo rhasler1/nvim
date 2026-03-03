@@ -1,5 +1,6 @@
 local vim_options  = 'core.options'
 local vim_mappings = 'core.mappings'
+local lazy         = 'lazy.lazy'
 
 local ok
 
@@ -16,3 +17,9 @@ if not ok then
 else
     --print('Vim key mappings loaded from',vim_mappings)
 end
+
+ok = pcall(require, lazy)
+if not ok then
+    print('Failed to load lazy from',lazy)
+end
+
