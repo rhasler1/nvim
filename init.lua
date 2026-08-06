@@ -23,3 +23,10 @@ if not ok then
     print('Failed to load lazy from',lazy)
 end
 
+-- For displaying syntax errors
+vim.diagnostic.config({
+    virtual_text = true,
+    signs = true,
+    underline = true,
+    severity_sort = true,
+})
